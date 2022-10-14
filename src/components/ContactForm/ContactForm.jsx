@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import s from './ContactForm.module.scss';
+import PropTypes from 'prop-types';
 
 class Form extends Component {
   state = {
@@ -68,5 +69,10 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+};
 
 export default Form;

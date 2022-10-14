@@ -20,7 +20,7 @@ const ContactList = ({ onDeleteContact, visibleContacts }) => (
 
 ContactList.propTypes = {
   onDeleteContact: PropTypes.func.isRequired,
-  visibleContacts: PropTypes ({ [ContactList] : 'isRequired' }),
+  visibleContacts:PropTypes.func.isRequired,
 };
 
 export default ContactList;
