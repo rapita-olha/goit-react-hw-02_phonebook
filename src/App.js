@@ -9,7 +9,6 @@ import ContactList from './components/ContactList';
 import './App.scss';
 
 class App extends Component {
-  // стейт нужен каждый раз, поэтому храним в родителе
   state = {
     contacts: [],
     filter: '',
@@ -25,7 +24,7 @@ class App extends Component {
 
     contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())
       ? alert(`${name} is already in contacts.`)
-      : //   alert(`${contact.name} is already in contacts.`);
+      :
         this.setState(prevState => ({
           contacts: [contact, ...prevState.contacts],
         }));
@@ -63,7 +62,7 @@ class App extends Component {
         <Title title="Phonebook" />
         <ContactForm onSubmit={addContact} />
 
-        <Title title="Contacts" />
+        <h2>Contacts</h2>
         <Filter value={filter} onChange={changeFilter} />
         <ContactList
           visibleContacts={visibleContacts}
